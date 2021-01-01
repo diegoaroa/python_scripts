@@ -20,7 +20,7 @@ def write_files(allfiles, alistoffiles):
     """Create a text ALLFILES with ALISTOFFILES."""
     with open(allfiles, 'wt') as all_files:
         for file in alistoffiles:
-            with open(file, 'rt') as afile:
+            with open(file, 'rt', errors='ignore') as afile:
                 for line in afile:
                     all_files.write(line)
 
